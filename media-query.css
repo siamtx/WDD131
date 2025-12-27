@@ -1,0 +1,74 @@
+/*
+    ------------------------------
+    1. FONT IMPORT
+    -------------------------------
+*/
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+/* 
+    --------------------------------
+    2. BASE STYLES
+    --------------------------------
+*/
+body{
+    /* Use the requested Google Font */
+    font-family: "Roboto", sans-serif;
+    background-color: #f4f4f9; /* Light, neutral page background */
+    margin: 0;
+    padding: 0;
+}
+
+/* Base style fro the structural elements: header, main and footer */
+
+header, main, footer{
+    /* maximum width and centering */
+    max-width: 640px;
+    margin: 1rem auto;
+
+    /* Faint border, padding and blueish background */
+    border: 1px dotted #c2d3e0;
+    padding: 1rem;
+    background-color: #68a4f1; /* blueish background */
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0, 0.05);
+}
+/* Main element styling (default: single column for mobile-first design */
+main{
+    display: grid;
+    /* Set the default to a single cloumn for mobile-first design */
+    grid-template-columns: 1fr;
+    grid-gap: 1rem;
+}
+/* Section element styling */
+section{
+    padding: 1rem;
+    background-color: white; /* White background for secitons inside main */
+    border-radius: 6px;
+    border: 1px solid #eee;
+}
+
+/* Placeholder style for text visibility */
+h1 {
+    font-size: 1.5rem;
+}
+
+/* 
+    ---------------------------------------------------
+    3. MEDIA QUERY (Viewport width 500px and greater)
+    ---------------------------------------------------
+*/
+@media screen and (min-width: 500px) {
+    /* Change the header's appearance */
+    header{
+        background-color: black;
+        color: white;
+        border-color: #333;
+        }
+        
+    /* Change the main elelment to display two equal columns */
+        main{
+            grid-template-columns: 1fr 1fr; /* Two columns of equal size */
+        }
+    
+    
+    }
